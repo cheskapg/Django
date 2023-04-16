@@ -6,8 +6,8 @@ from .views import board_info, board_actions
 #      path('', views.index, name='index'),
 #  ]
 urlpatterns = [
-    path('', views.board_info, name='board_info'),
+    # path('admin', views.board_info, name='board_info'),
     path('details/', board_info), 
-    path('details/<int:pk>/', board_info),
+    path('/details/<int:pk>/', board_info),
      
      ]

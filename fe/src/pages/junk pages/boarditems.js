@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 
-import { titleGlobal  } from "./boards";
+import { titleGlobal  } from "../boards";
 import { SemanticClassificationFormat } from "typescript";
 import { title } from "process";
 export default function todo() {

@@ -7,8 +7,7 @@ const useBoardStore = create((set) => ({
 
   getBoardList: () => {
     set({ isLoading: true });
-    axios
-      .get(`${process.env.API_URL}/`)
+    axios.get(`${process.env.API_URL}/details/`)
       .then((response) => {
         console.log(response.data);
         set({ boardModel: response.data, isLoading: false });

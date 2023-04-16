@@ -1,4 +1,5 @@
 
+import useBoardStore from "../api/storeBoard";
 import { useState , useEffect} from "react";
 import { useRouter } from 'next/router';
 import { title } from "process";
@@ -10,8 +11,13 @@ function boards() {
     description: ""
 
   });
-  
-  
+  const { boardModel, getBoardList } = useBoardStore();
+
+  useEffect(() => {
+    console.log("Mounted");
+    getBoardList();                                                                         
+    console.log(boardModel);
+  }, []);
   // useEffect(() => {
   //   setTodos((currentList) => [
      
@@ -171,7 +177,7 @@ function boards() {
                 <div className="pt-5 "></div>
                 <div className="justify-center mx-10">
                   <ul className="grid grid-cols-3 gap-7 mx-10">
-                    {todos.map((todo, index) => {
+                    {boardModel.map((todo, index) => {
                       return (
                         <section>
                           

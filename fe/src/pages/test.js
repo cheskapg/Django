@@ -9,7 +9,7 @@ export default function Board() {
   useEffect(() => {
     console.log("Mounted");
     getBoardList();                                                                         
-
+    console.log(boardModel);
   }, []);
 
   return (
