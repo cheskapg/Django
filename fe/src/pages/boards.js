@@ -30,7 +30,7 @@ function boards() {
   function loginSwitch(){
     router.push('/login');
   }
-  const [todoTab, setTodoTab] = useState(true);
+  const [todoTab, setTodoTab] = useState(false);
   var [titleView, setTitleView] = useState("");
 
 
