@@ -181,7 +181,7 @@ function boards() {
                       return (
                         <section>
                           
-                          {(todo.title==="plus") ? (
+                          {/* {(todo.title==="plus") ? (
                             <li className="text-sm pt-2 flex">
                               <div class="flex w-full px-5 py-5 flex justify-center border border-green-500 rounded-xl shadow  dark:text-green-500"
                               onClick={switchTodo}>
@@ -189,7 +189,7 @@ function boards() {
                             
                               </div>
                             </li>
-                          ) : (
+                          ) : ( */}
                             <li className="text-sm pt-2 flex"  key={index}>
                              <div onClick={() => openBoard(todo.title)} class="flex w-full px-5 py-3 border  text-green-500 border-green-500 rounded-xl shadow ">
                               <div className="grid grid-cols-1 mb-3">
@@ -204,10 +204,19 @@ function boards() {
                             </div> 
                          
                           </li>
-                          )}
+                         
+                          {/* )} */}
                         </section>
+                        
                       );
                     })}
+                     <li className="text-sm pt-2 flex">
+                              <div class="flex w-full px-5 py-5 flex justify-center border border-green-500 rounded-xl shadow  dark:text-green-500"
+                              onClick={switchTodo}>
+                                <div id="plus" className=" mb-3 text-bold text-2xl">+</div>
+                            
+                              </div>
+                            </li>
                   </ul>
                 
                 </div>
